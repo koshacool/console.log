@@ -6,14 +6,17 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "lint-staged": "./node_modules/.bin/lint-staged"
+    "eslint": "eslint ./src",
+    "eslint:fix": "eslint ./src --fix",
+    "lint-staged": "lint-staged"
   },
   "lint-staged": {
-  "*.{js,jsx}": [
-    "pretty-quick --staged",
-    "eslint src/ --fix",
-    "git add"
-  ]
+    "*.{js,jsx}": [
+      "pretty-quick --staged",
+      "git add",
+      "eslint src/ --fix",
+      "git add"
+    ]
 },
   "precommit": "NODE_ENV=production lint-staged",
   "dependencies": {
@@ -60,9 +63,6 @@
     "webpack-dev-server": "3.1.14",
     "webpack-manifest-plugin": "2.0.4",
     "workbox-webpack-plugin": "3.6.3"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": [
     ">0.2%",
