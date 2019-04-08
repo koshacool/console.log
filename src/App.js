@@ -10,6 +10,7 @@ class App extends Component {
   }
 
   render() {
+    const a = 5
     return (
       <div className="App">
         <header className="App-header">

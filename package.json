@@ -6,7 +6,6 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "test": "node scripts/test.js",
     "lint-staged": "./node_modules/.bin/lint-staged"
   },
   "lint-staged": {
