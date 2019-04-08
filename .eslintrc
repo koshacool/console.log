@@ -1,4 +1,4 @@
-module.exports = {
+{
   "extends": ["airbnb", "prettier", "prettier/react"],
   "plugins": ["prettier"],
   "rules": {
@@ -23,4 +23,4 @@ module.exports = {
     "navigator": true
   },
   "parser": "babel-eslint"
-};
+}
