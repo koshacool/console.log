@@ -6,12 +6,11 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { test: "asdfsf" }
+    this.state = { test: 'asdfsf' };
   }
 
   render() {
-    const a = "dsf"
-
+    const a = 'dsf';
 
     return (
       <div className="App">

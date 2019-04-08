@@ -12,7 +12,7 @@
   },
   "lint-staged": {
     "*.{js,jsx}": [
-      "pretty-quick --staged --ignore-path ./src/*.test.js",
+      "pretty-quick --staged",
       "git add",
       "eslint src/ --fix",
       "git add"
