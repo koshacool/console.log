@@ -11,6 +11,7 @@ class App extends Component {
 
   render() {
     const a = 'dsf';
+    const { test } = this.state;
 
     return (
       <div className="App">
@@ -18,7 +19,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
-            {this.state.test}
+            {test}
           </p>
           <a
             className="App-link"

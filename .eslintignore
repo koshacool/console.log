@@ -1,2 +1,2 @@
-./src/serviceWorker.js
-**/**.test.js
+**/*test.js
+**/serviceWorker.js

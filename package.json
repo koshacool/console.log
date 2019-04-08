@@ -8,17 +8,16 @@
     "test": "node scripts/test.js",
     "eslint": "eslint ./src",
     "eslint:fix": "eslint ./src --fix",
+    "precommit": "NODE_ENV=production lint-staged",
     "lint-staged": "lint-staged"
   },
   "lint-staged": {
     "*.{js,jsx}": [
       "pretty-quick --staged",
-      "git add",
       "eslint src/ --fix",
       "git add"
     ]
   },
-  "precommit": "NODE_ENV=production lint-staged",
   "dependencies": {
     "@babel/core": "7.2.2",
     "@svgr/webpack": "4.1.0",
