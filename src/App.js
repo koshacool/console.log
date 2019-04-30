@@ -1,38 +1,44 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
+import MobileDetect from 'mobile-detect';
 import logo from './logo.svg';
 import './App.css';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
+const App = () => {
+  const [opened, setStatus] = useState(false);
+  const detector = new MobileDetect(navigator.userAgent);
+  console.log(detector, detector.mobile());
+  console.log('PHONE;: ', detector.phone());
+  console.log('TABLET: ', detector.tablet());
 
-    this.state = { test: 'asdfs' };
-  }
-
-  render() {
-    const a = 'dsf';
-    const { test } = this.state;
-
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-            {test}
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
-}
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <button
+          type="button"
+          onClick={() => setStatus(!opened)}
+          style={{
+            padding: '10px',
+            margin: '10px',
+            color: 'white',
+            backgroundColor: '#61dafb',
+            width: '200px',
+            fontSize: '30px',
+          }}
+        >
+          Log to console
+        </button>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
+};
 
 export default App;
